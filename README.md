@@ -118,6 +118,8 @@ These were the real issues found and fixed during development — included becau
 
 - **Update Sets don't track data records:** while packaging this project for version control, discovered that ServiceNow Update Sets only capture *customizations* (tables, Business Rules, Notifications, ACLs, etc.) — not the actual data rows inside a custom table. Sample data had to be exported separately via list export rather than relying on the Update Set.
 
+  ![Update Set showing the 6 captured customizations — table, business rule, and both notifications](screenshots/update-set-customer-updates.png)
+
 ---
 
 ## Repository Contents
@@ -144,6 +146,8 @@ Before importing the Update Set into another instance, create these three groups
 | "general question about billing" (no keyword match) | No auto-categorization applied — falls back to manual triage |
 
 All four scenarios were manually verified end-to-end, including confirming both notification emails appeared correctly in `System Logs > Emails` with the expected recipients.
+
+![Email log showing correct test results](screenshots/test-results-email-log.png)
 
 ---
 
