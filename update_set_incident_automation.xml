@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-07-15 11:35:04">
+<sys_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<base_update_set display_value=""/>
+<batch_install_plan display_value=""/>
+<completed_by display_value=""/>
+<completed_on>2026-07-15 10:26:34</completed_on>
+<description/>
+<install_date/>
+<installed_from/>
+<is_default>false</is_default>
+<merged_to display_value=""/>
+<name>Incident Automation - Global v1</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_sys_id display_value=""/>
+<state>in progress</state>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-07-15 10:27:17</sys_created_on>
+<sys_id>b72cda1ec382cf1061b532a77d0131da</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-07-15 10:27:17</sys_updated_on>
+</sys_update_set>
+</unload>

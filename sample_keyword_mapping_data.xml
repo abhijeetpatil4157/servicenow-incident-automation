@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-07-15 11:33:24">
+<u_incident_keyword_mapping action="INSERT_OR_UPDATE">
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-07-14 12:48:31</sys_created_on>
+<sys_id>54b2f54ec38e0f1061b532a77d0131d9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-07-14 12:48:31</sys_updated_on>
+<u_active>true</u_active>
+<u_assignment_group display_value="Desktop Support" name="Desktop Support">40e0718ac38e0f1061b532a77d01315e</u_assignment_group>
+<u_category>hardware</u_category>
+<u_keyword>mouse</u_keyword>
+<u_subcategory>Mouse</u_subcategory>
+</u_incident_keyword_mapping>
+<u_incident_keyword_mapping action="INSERT_OR_UPDATE">
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-07-14 12:46:37</sys_created_on>
+<sys_id>8b82b14ec38e0f1061b532a77d0131b4</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-07-14 12:46:37</sys_updated_on>
+<u_active>true</u_active>
+<u_assignment_group display_value="Network Team" name="Network Team">b4a1c9b5c355471061b532a77d0131ef</u_assignment_group>
+<u_category>network</u_category>
+<u_keyword>vpn</u_keyword>
+<u_subcategory>VPN</u_subcategory>
+</u_incident_keyword_mapping>
+<u_incident_keyword_mapping action="INSERT_OR_UPDATE">
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-07-14 12:45:56</sys_created_on>
+<sys_id>0562bd0ec38e0f1061b532a77d0131ac</sys_id>
+<sys_mod_count>2</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-07-15 11:12:26</sys_updated_on>
+<u_active>true</u_active>
+<u_assignment_group display_value="Service Desk" name="Service Desk">d625dccec0a8016700a222a0f7900d06</u_assignment_group>
+<u_category>software</u_category>
+<u_keyword>password</u_keyword>
+<u_subcategory>Operating System</u_subcategory>
+</u_incident_keyword_mapping>
+</unload>
