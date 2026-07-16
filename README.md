@@ -151,6 +151,29 @@ All four scenarios were manually verified end-to-end, including confirming both 
 
 ---
 
+## Version Control: Two Approaches Tried
+
+This project was version-controlled two different ways, deliberately, to learn both paths ServiceNow developers actually use.
+
+**1. Manual Update Set export (documented above)** — built the artifacts in Global scope, captured them into a Local Update Set, and exported to XML. This is the fallback path when artifacts already exist outside a scoped app, or when a team doesn't have Studio's native Git integration configured.
+
+**2. Studio's native Source Control integration** — rebuilt the same table, Business Rule, and notifications a second time, natively inside a custom scoped application (`Incident Automation`), connected directly to a GitHub repo via a Personal Access Token, and used Studio's built-in Commit/Push/Pull Request tooling end-to-end.
+
+### What the native Studio → GitHub workflow looks like
+
+- Studio connects to a repo via **repo URL + GitHub Personal Access Token** (Source Control → Configure)
+- Each ServiceNow instance gets its own **auto-created branch** (e.g. `sn_instances/dev310914`) — work stays isolated per-instance until deliberately merged
+- **"Commit changes" in Studio does both commit and push in one action** — there's no separate local-vs-remote step like a typical `git commit` + `git push` workflow, since there's no local clone; Studio talks to the remote directly
+- Merging into `main` is a normal GitHub **Pull Request** — review the diff, confirm no conflicts, merge, optionally delete the feature branch
+
+### Key lesson: scope has to be decided *before* building, not after
+
+The first attempt was to take the already-built Global-scope artifacts and migrate them into the new scoped app after the fact. This hit a hard platform limitation — the `Application` field on an existing table record is locked from direct editing once the record has dependencies, and there's no clean supported UI path to reassign it. Rather than force it with an unsupported background script, the correct fix was to switch the session's **Application scope to the target app first**, then rebuild the table, Business Rule, and notifications — since new records are natively born into whatever scope is currently active. Everything committed cleanly on the first try once approached in that order.
+
+One more scope-related snag along the way: switching Application scope automatically resets the session's Update Set back to "Default," and an Update Set belonging to one scope can't be set as current while the session is in a different scope — so scope and Update Set both need to be set deliberately, in that order, before making changes meant to be tracked.
+
+---
+
 ## Possible Next Steps
 
 - SLA-driven escalation (notify/escalate when an SLA is approaching or has breached)
